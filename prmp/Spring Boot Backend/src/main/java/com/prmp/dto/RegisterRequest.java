@@ -1,5 +1,7 @@
 package com.prmp.dto;
 
+import com.prmp.enums.UserRole;
+
 import lombok.*;
 
 @Getter
@@ -11,7 +13,7 @@ public class RegisterRequest {
     private String name;
     private String email;
     private String password;
-    private String role;
+    private UserRole role;
 	public String getName() {
 		return name;
 	}
@@ -30,13 +32,13 @@ public class RegisterRequest {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getRole() {
+	public UserRole getRole() {
 		return role;
 	}
-	public void setRole(String role) {
+	public void setRole(UserRole role) {
 		this.role = role;
 	}
-	public RegisterRequest(String name, String email, String password, String role) {
+	public RegisterRequest(String name, String email, String password, UserRole role) {
 		
 		this.name = name;
 		this.email = email;
