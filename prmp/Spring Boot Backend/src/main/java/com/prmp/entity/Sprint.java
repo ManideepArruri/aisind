@@ -37,6 +37,78 @@ public class Sprint {
 	
 	@Enumerated(EnumType.STRING)
 	private SprintStatus status;
+
+	public Integer getSprintId() {
+		return sprintId;
+	}
+
+	public void setSprintId(Integer sprintId) {
+		this.sprintId = sprintId;
+	}
+
+	public Project getProject() {
+		return project;
+	}
+
+	public void setProject(Project project) {
+		this.project = project;
+	}
+
+	public String getSprintName() {
+		return sprintName;
+	}
+
+	public void setSprintName(String sprintName) {
+		this.sprintName = sprintName;
+	}
+
+	public Integer getVelocity() {
+		return velocity;
+	}
+
+	public void setVelocity(Integer velocity) {
+		this.velocity = velocity;
+	}
+
+	public LocalDate getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
+	}
+
+	public LocalDate getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
+	}
+
+	public SprintStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(SprintStatus status) {
+		this.status = status;
+	}
+
+	public Sprint(Integer sprintId, Project project, String sprintName, Integer velocity, LocalDate startDate,
+			LocalDate endDate, SprintStatus status) {
+		
+		this.sprintId = sprintId;
+		this.project = project;
+		this.sprintName = sprintName;
+		this.velocity = velocity;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.status = status;
+	}
+
+	public Sprint() {
+		
+	}
 	
 	
 }
