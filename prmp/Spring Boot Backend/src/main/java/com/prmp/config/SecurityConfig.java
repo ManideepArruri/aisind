@@ -28,13 +28,8 @@ public class SecurityConfig {
 
                 .authorizeHttpRequests(auth -> auth
 
-                        .requestMatchers(
-                                "/api/auth/**"
-                        )
-                        .permitAll()
-
                         .anyRequest()
-                        .authenticated()
+                        .permitAll()
                 );
 
         return http.build();

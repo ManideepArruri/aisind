@@ -2,6 +2,7 @@ package com.prmp.entity;
 
 import com.prmp.enums.UserRole;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
