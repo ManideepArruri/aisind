@@ -1,33 +1,45 @@
 package com.prmp.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.time.LocalDate;
+
+import com.prmp.enums.*;
+
+import jakarta.persistence.*;
+
+import lombok.*;
 
 @Entity
+@Table(name = "tasks")
+
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+
 public class Task {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer taskId;
-	
-	@ManyToOne
-	@JoinColumn(name = "sprint_id")
-	private Sprint sprint;
-	
-	@ManyToOne
-	@JoinColumn(name = "assignee_id")
-	private User assignee;
-	
-	private String title;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer taskId;
+
+    private String title;
+
+    private String description;
+
+    private LocalDate dueDate;
+
+    @Enumerated(EnumType.STRING)
+    private TaskStatus status;
+
+    @Enumerated(EnumType.STRING)
+    private TaskPriority priority;
+
+    @ManyToOne
+    @JoinColumn(name = "sprint_id")
+    private Sprint sprint;
+
+    @ManyToOne
+    @JoinColumn(name = "assigned_user_id")
+    private User assignedUser;
 
 	public Integer getTaskId() {
 		return taskId;
@@ -35,22 +47,6 @@ public class Task {
 
 	public void setTaskId(Integer taskId) {
 		this.taskId = taskId;
-	}
-
-	public Sprint getSprint() {
-		return sprint;
-	}
-
-	public void setSprint(Sprint sprint) {
-		this.sprint = sprint;
-	}
-
-	public User getAssignee() {
-		return assignee;
-	}
-
-	public void setAssignee(User assignee) {
-		this.assignee = assignee;
 	}
 
 	public String getTitle() {
@@ -61,18 +57,68 @@ public class Task {
 		this.title = title;
 	}
 
-	public Task(Integer taskId, Sprint sprint, User assignee, String title) {
-		
-		this.taskId = taskId;
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public LocalDate getDueDate() {
+		return dueDate;
+	}
+
+	public void setDueDate(LocalDate dueDate) {
+		this.dueDate = dueDate;
+	}
+
+	public TaskStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(TaskStatus status) {
+		this.status = status;
+	}
+
+	public TaskPriority getPriority() {
+		return priority;
+	}
+
+	public void setPriority(TaskPriority priority) {
+		this.priority = priority;
+	}
+
+	public Sprint getSprint() {
+		return sprint;
+	}
+
+	public void setSprint(Sprint sprint) {
 		this.sprint = sprint;
-		this.assignee = assignee;
+	}
+
+	public User getAssignedUser() {
+		return assignedUser;
+	}
+
+	public void setAssignedUser(User assignedUser) {
+		this.assignedUser = assignedUser;
+	}
+
+	public Task(Integer taskId, String title, String description, LocalDate dueDate, TaskStatus status,
+			TaskPriority priority, Sprint sprint, User assignedUser) {
+		this.taskId = taskId;
 		this.title = title;
+		this.description = description;
+		this.dueDate = dueDate;
+		this.status = status;
+		this.priority = priority;
+		this.sprint = sprint;
+		this.assignedUser = assignedUser;
 	}
 
 	public Task() {
-
 	}
-	
-	
+
 	
 }

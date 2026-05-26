@@ -1,7 +1,7 @@
 package com.prmp.enums;
 
 public enum TaskStatus {
-	TOTO,
+	TODO,
 	IN_PROGRESS,
 	DONE,
 	BLOCKED
