@@ -1,0 +1,24 @@
+.team-task-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.team-task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.team-task-table th,
+.team-task-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.team-task-table th {
+  background: #f8fafc;
+}
