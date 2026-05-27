@@ -2,19 +2,13 @@ package com.prmp.entity;
 
 import java.time.LocalDate;
 
-import com.prmp.enums.*;
+import com.prmp.enums.TaskPriority;
+import com.prmp.enums.TaskStatus;
 
 import jakarta.persistence.*;
 
-import lombok.*;
-
 @Entity
 @Table(name = "tasks")
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-
 public class Task {
 
     @Id
@@ -33,6 +27,8 @@ public class Task {
     @Enumerated(EnumType.STRING)
     private TaskPriority priority;
 
+    private Integer storyPoints;
+
     @ManyToOne
     @JoinColumn(name = "sprint_id")
     private Sprint sprint;
@@ -41,84 +37,100 @@ public class Task {
     @JoinColumn(name = "assigned_user_id")
     private User assignedUser;
 
-	public Integer getTaskId() {
-		return taskId;
-	}
+    public Task() {
+    }
 
-	public void setTaskId(Integer taskId) {
-		this.taskId = taskId;
-	}
+    public Task(Integer taskId, String title, String description, LocalDate dueDate,
+                TaskStatus status, TaskPriority priority,
+                Sprint sprint, User assignedUser) {
 
-	public String getTitle() {
-		return title;
-	}
+        this.taskId = taskId;
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.status = status;
+        this.priority = priority;
+        this.sprint = sprint;
+        this.assignedUser = assignedUser;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
+    public Integer getTaskId() {
+        return taskId;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setTaskId(Integer taskId) {
+        this.taskId = taskId;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public LocalDate getDueDate() {
-		return dueDate;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public void setDueDate(LocalDate dueDate) {
-		this.dueDate = dueDate;
-	}
+    public String getDescription() {
+        return description;
+    }
 
-	public TaskStatus getStatus() {
-		return status;
-	}
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
-	public void setStatus(TaskStatus status) {
-		this.status = status;
-	}
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
 
-	public TaskPriority getPriority() {
-		return priority;
-	}
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
 
-	public void setPriority(TaskPriority priority) {
-		this.priority = priority;
-	}
+    public TaskStatus getStatus() {
+        return status;
+    }
 
-	public Sprint getSprint() {
-		return sprint;
-	}
+    public void setStatus(TaskStatus status) {
+        this.status = status;
+    }
 
-	public void setSprint(Sprint sprint) {
-		this.sprint = sprint;
-	}
+    public TaskPriority getPriority() {
+        return priority;
+    }
 
-	public User getAssignedUser() {
-		return assignedUser;
-	}
+    public void setPriority(TaskPriority priority) {
+        this.priority = priority;
+    }
 
-	public void setAssignedUser(User assignedUser) {
-		this.assignedUser = assignedUser;
-	}
+    public Sprint getSprint() {
+        return sprint;
+    }
 
-	public Task(Integer taskId, String title, String description, LocalDate dueDate, TaskStatus status,
-			TaskPriority priority, Sprint sprint, User assignedUser) {
-		this.taskId = taskId;
-		this.title = title;
-		this.description = description;
-		this.dueDate = dueDate;
-		this.status = status;
-		this.priority = priority;
-		this.sprint = sprint;
-		this.assignedUser = assignedUser;
-	}
+    public void setSprint(Sprint sprint) {
+        this.sprint = sprint;
+    }
 
-	public Task() {
-	}
+    public User getAssignedUser() {
+        return assignedUser;
+    }
 
-	
+    public void setAssignedUser(User assignedUser) {
+        this.assignedUser = assignedUser;
+    }
+
+    public Integer getStoryPoints() {
+        return storyPoints;
+    }
+
+    public void setStoryPoints(Integer storyPoints) {
+        this.storyPoints = storyPoints;
+    }
+
+    public TaskPriority getTaskPriority() {
+        return this.priority;
+    }
+
+    public TaskStatus getTaskStatus() {
+        return this.status;
+    }
 }
