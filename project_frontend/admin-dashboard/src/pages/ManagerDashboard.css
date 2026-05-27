@@ -1,0 +1,63 @@
+.manager-dashboard-container {
+  display: flex;
+}
+
+.manager-main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  background: #f4f6f9;
+}
+
+.manager-dashboard-body {
+  padding: 30px;
+}
+
+.manager-stats-section {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.manager-chart-section {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.manager-card {
+  flex: 1;
+  min-width: 320px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.manager-progress-bar {
+  width: 100%;
+  height: 20px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.manager-progress-fill {
+  width: 75%;
+  height: 100%;
+  background: #2563eb;
+}
+
+@media (max-width: 900px) {
+  .manager-main-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .manager-sidebar {
+    display: none;
+  }
+}

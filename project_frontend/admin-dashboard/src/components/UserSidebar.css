@@ -1,0 +1,34 @@
+.user-sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #111827;
+  color: white;
+  position: fixed;
+  padding: 20px;
+}
+
+.user-logo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.user-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.user-menu li {
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.user-menu a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.user-menu li:hover {
+  background: #1f2937;
+}
