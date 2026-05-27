@@ -5,7 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.prmp.entity.Sprint;
+import com.prmp.dto.SprintRequestDTO;
+import com.prmp.dto.SprintResponseDTO;
 import com.prmp.service.SprintService;
 
 @RestController
@@ -17,27 +18,27 @@ public class SprintController {
     private SprintService sprintService;
 
     @PostMapping
-    public Sprint createSprint(@RequestBody Sprint sprint) {
+    public SprintResponseDTO createSprint(@RequestBody SprintRequestDTO requestDTO) {
 
-        return sprintService.createSprint(sprint);
+        return sprintService.createSprint(requestDTO);
     }
 
     @GetMapping
-    public List<Sprint> getAllSprints() {
+    public List<SprintResponseDTO> getAllSprints() {
 
         return sprintService.getAllSprints();
     }
 
     @GetMapping("/{id}")
-    public Sprint getSprintById(@PathVariable Integer id) {
+    public SprintResponseDTO getSprintById(@PathVariable Integer id) {
 
         return sprintService.getSprintById(id);
     }
 
     @PutMapping("/{id}")
-    public Sprint updateSprint(@PathVariable Integer id,@RequestBody Sprint sprint) {
+    public SprintResponseDTO updateSprint(@PathVariable Integer id,@RequestBody SprintRequestDTO requestDTO) {
 
-        return sprintService.updateSprint(id,sprint);
+        return sprintService.updateSprint(id,requestDTO);
     }
 
     @DeleteMapping("/{id}")

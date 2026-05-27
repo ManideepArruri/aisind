@@ -2,17 +2,18 @@ package com.prmp.service;
 
 import java.util.List;
 
-import com.prmp.entity.Project;
+import com.prmp.dto.ProjectRequestDTO;
+import com.prmp.dto.ProjectResponseDTO;
 
 public interface ProjectService {
 
-    Project createProject(Project project);
+    ProjectResponseDTO createProject(ProjectRequestDTO requestDTO);
 
-    List<Project> getAllProjects();
+    List<ProjectResponseDTO> getAllProjects();
 
-    Project getProjectById(Integer id);
+    ProjectResponseDTO getProjectById(Integer id);
 
-    Project updateProject(Integer id,Project project);
+    ProjectResponseDTO updateProject(Integer id,ProjectRequestDTO requestDTO);
 
     void deleteProject(Integer id);
 }

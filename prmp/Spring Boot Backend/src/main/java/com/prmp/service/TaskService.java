@@ -2,17 +2,20 @@ package com.prmp.service;
 
 import java.util.List;
 
-import com.prmp.entity.Task;
+import com.prmp.dto.TaskRequestDTO;
+import com.prmp.dto.TaskResponseDTO;
 
 public interface TaskService {
 
-    Task createTask(Task task);
+    TaskResponseDTO createTask(TaskRequestDTO requestDTO);
 
-    List<Task> getAllTasks();
+    List<TaskResponseDTO> getAllTasks();
 
-    Task getTaskById(Integer id);
+    TaskResponseDTO getTaskById(Integer id);
 
-    Task updateTask(Integer id,Task task);
+    TaskResponseDTO updateTask(
+            Integer id,
+            TaskRequestDTO requestDTO);
 
     void deleteTask(Integer id);
 }

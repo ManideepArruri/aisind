@@ -2,17 +2,18 @@ package com.prmp.service;
 
 import java.util.List;
 
-import com.prmp.entity.Sprint;
+import com.prmp.dto.SprintRequestDTO;
+import com.prmp.dto.SprintResponseDTO;
 
 public interface SprintService {
 
-    Sprint createSprint(Sprint sprint);
+    SprintResponseDTO createSprint(SprintRequestDTO requestDTO);
 
-    List<Sprint> getAllSprints();
+    List<SprintResponseDTO> getAllSprints();
 
-    Sprint getSprintById(Integer id);
+    SprintResponseDTO getSprintById(Integer id);
 
-    Sprint updateSprint(Integer id,Sprint sprint);
+    SprintResponseDTO updateSprint(Integer id,SprintRequestDTO requestDTO);
 
     void deleteSprint(Integer id);
 }

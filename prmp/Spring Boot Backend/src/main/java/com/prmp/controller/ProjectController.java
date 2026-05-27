@@ -5,7 +5,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import com.prmp.entity.Project;
+import com.prmp.dto.ProjectRequestDTO;
+import com.prmp.dto.ProjectResponseDTO;
 import com.prmp.service.ProjectService;
 
 @RestController
@@ -17,27 +18,27 @@ public class ProjectController {
     private ProjectService projectService;
 
     @PostMapping
-    public Project createProject(@RequestBody Project project) {
+    public ProjectResponseDTO createProject( @RequestBody ProjectRequestDTO requestDTO){
 
-        return projectService.createProject(project);
+        return projectService.createProject(requestDTO);
     }
 
     @GetMapping
-    public List<Project> getAllProjects() {
+    public List<ProjectResponseDTO> getAllProjects() {
 
         return projectService.getAllProjects();
     }
 
     @GetMapping("/{id}")
-    public Project getProjectById(@PathVariable Integer id) {
+    public ProjectResponseDTO getProjectById(@PathVariable Integer id) {
 
         return projectService.getProjectById(id);
     }
 
     @PutMapping("/{id}")
-    public Project updateProject(@PathVariable Integer id,@RequestBody Project project) {
+    public ProjectResponseDTO updateProject( @PathVariable Integer id,@RequestBody ProjectRequestDTO requestDTO) {
 
-        return projectService.updateProject(id,project);
+        return projectService.updateProject(id,requestDTO);
     }
 
     @DeleteMapping("/{id}")
