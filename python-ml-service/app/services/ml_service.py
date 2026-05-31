@@ -42,15 +42,29 @@ def ml_predict(metrics: dict):
     prob = model.predict_proba(X)[0][1] * 100
     prob_int = int(prob)
 
-    status = "On Track"
+    risk_status = "LOW_RISK"
+    recommendation = "Continue current sprint plan"
+
     if prob_int >= 80:
-        status = "High Risk / Delayed"
+        risk_status = "HIGH_RISK"
+        recommendation = (
+            "Increase developer allocation immediately"
+        )
+
     elif prob_int >= 50:
-        status = "Moderate Risk"
+        risk_status = "MODERATE_RISK"
+        recommendation = (
+            "Monitor sprint velocity and resource allocation"
+        )
+
     elif prob_int >= 30:
-        status = "Uncertain / Monitor"
+        risk_status = "ON_TRACK"
+        recommendation = (
+            "Monitor project progress closely"
+        )
 
     return {
         "delay_probability": prob_int,
-        "status": status
+        "risk_status": risk_status,
+        "recommendation": recommendation
     }

@@ -46,13 +46,29 @@ def rule_based_prediction(metrics: dict):
     u = metrics["team_utilization"]
 
     if v > 50 and c > 80 and u < 85:
-        return {"delay_probability": 10, "status": "On Track"}
+        return {
+            "delay_probability": 10,
+            "risk_status": "LOW_RISK",
+            "recommendation": "Continue current sprint plan"
+        }
     elif 30 <= v <= 50 and 60 <= c <= 80 and 85 <= u <= 95:
-        return {"delay_probability": 50, "status": "Moderate Risk"}
+        return {
+            "delay_probability": 50,
+            "risk_status": "MEDIUM_RISK",
+            "recommendation": "Monitor sprint velocity and resource allocation"
+        }
     elif v < 30 and c < 60 and u > 95:
-        return {"delay_probability": 85, "status": "High Risk / Delayed"}
+        return {
+            "delay_probability": 85,
+            "risk_status": "HIGH_RISK",
+            "recommendation": "Increase developer allocation immediately"
+        }
     else:
-        return {"delay_probability": 40, "status": "Uncertain / Monitor"}
+        return {
+            "delay_probability": 40,
+            "risk_status": "MEDIUM_RISK",
+            "recommendation": "Monitor project progress closely"
+        }
 
 def convert_to_python_types(data: dict):
     clean = {}
