@@ -70,3 +70,10 @@ node_modules/
 # Coverage / Reports
 # =========================
 coverage/
+
+# Python
+__pycache__/
+*.pyc
+
+# STS
+.metadata/
