@@ -60,7 +60,7 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public ProjectResponseDTO getProjectById(Integer id) {
+    public ProjectResponseDTO getProjectById(Long id) {
 
         Project project = projectRepository.findById(id)
                 .orElseThrow(() ->new RuntimeException("Project not found"));
@@ -70,7 +70,7 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public ProjectResponseDTO updateProject(
-            Integer id,
+            Long id,
             ProjectRequestDTO requestDTO) {
 
         Project project = projectRepository.findById(id)
@@ -98,7 +98,7 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public void deleteProject(Integer id) {
+    public void deleteProject(Long id) {
 
         projectRepository.deleteById(id);
     }

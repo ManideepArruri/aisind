@@ -6,11 +6,11 @@ import com.prmp.enums.ProjectStatus;
 
 public class ProjectResponseDTO {
 
-    private Integer projectId;
+    private Long projectId;
 
     private String name;
 
-    private Integer managerId;
+    private Long managerId;
 
     private String managerName;
 
@@ -22,12 +22,12 @@ public class ProjectResponseDTO {
 
     private Float delayRiskScore;
 
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(Integer projectId) {
-        this.projectId = projectId;
+    public void setProjectId(Long long1) {
+        this.projectId = long1;
     }
 
     public String getName() {
@@ -38,12 +38,12 @@ public class ProjectResponseDTO {
         this.name = name;
     }
 
-    public Integer getManagerId() {
+    public Long getManagerId() {
         return managerId;
     }
 
-    public void setManagerId(Integer managerId) {
-        this.managerId = managerId;
+    public void setManagerId(Long long1) {
+        this.managerId = long1;
     }
 
     public String getManagerName() {

@@ -19,7 +19,7 @@ public class TaskRequestDTO {
 
     private Integer storyPoints;
 
-    private Integer sprintId;
+    private Long sprintId;
 
     private Long assignedUserId;
 
@@ -71,11 +71,11 @@ public class TaskRequestDTO {
         this.storyPoints = storyPoints;
     }
 
-    public Integer getSprintId() {
+    public Long getSprintId() {
         return sprintId;
     }
 
-    public void setSprintId(Integer sprintId) {
+    public void setSprintId(Long sprintId) {
         this.sprintId = sprintId;
     }
 

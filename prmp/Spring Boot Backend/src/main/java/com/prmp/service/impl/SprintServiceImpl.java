@@ -59,7 +59,7 @@ public class SprintServiceImpl implements SprintService {
     }
 
     @Override
-    public SprintResponseDTO getSprintById(Integer id) {
+    public SprintResponseDTO getSprintById(Long id) {
 
         Sprint sprint = sprintRepository.findById(id)
                 .orElseThrow(() ->new RuntimeException("Sprint not found"));
@@ -68,7 +68,7 @@ public class SprintServiceImpl implements SprintService {
     }
 
     @Override
-    public SprintResponseDTO updateSprint(Integer id,SprintRequestDTO requestDTO){
+    public SprintResponseDTO updateSprint(Long id,SprintRequestDTO requestDTO){
 
         Sprint sprint = sprintRepository.findById(id)
                 .orElseThrow(() ->new RuntimeException("Sprint not found"));
@@ -95,7 +95,7 @@ public class SprintServiceImpl implements SprintService {
     }
 
     @Override
-    public void deleteSprint(Integer id) {
+    public void deleteSprint(Long id) {
 
         sprintRepository.deleteById(id);
     }

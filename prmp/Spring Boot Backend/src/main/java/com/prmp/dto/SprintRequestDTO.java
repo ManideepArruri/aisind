@@ -6,7 +6,7 @@ import com.prmp.enums.SprintStatus;
 
 public class SprintRequestDTO {
 
-    private Integer projectId;
+    private Long projectId;
 
     private String sprintName;
 
@@ -18,11 +18,11 @@ public class SprintRequestDTO {
 
     private SprintStatus status;
 
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(Integer projectId) {
+    public void setProjectId(Long projectId) {
         this.projectId = projectId;
     }
 

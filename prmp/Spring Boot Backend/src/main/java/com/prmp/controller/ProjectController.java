@@ -30,19 +30,19 @@ public class ProjectController {
     }
 
     @GetMapping("/{id}")
-    public ProjectResponseDTO getProjectById(@PathVariable Integer id) {
+    public ProjectResponseDTO getProjectById(@PathVariable Long id) {
 
         return projectService.getProjectById(id);
     }
 
     @PutMapping("/{id}")
-    public ProjectResponseDTO updateProject( @PathVariable Integer id,@RequestBody ProjectRequestDTO requestDTO) {
+    public ProjectResponseDTO updateProject( @PathVariable Long id,@RequestBody ProjectRequestDTO requestDTO) {
 
         return projectService.updateProject(id,requestDTO);
     }
 
     @DeleteMapping("/{id}")
-    public String deleteProject(@PathVariable Integer id) {
+    public String deleteProject(@PathVariable Long id) {
 
         projectService.deleteProject(id);
 

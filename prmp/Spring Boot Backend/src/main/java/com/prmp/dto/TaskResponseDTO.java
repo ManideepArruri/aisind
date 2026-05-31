@@ -21,11 +21,11 @@ public class TaskResponseDTO {
 
     private Integer storyPoints;
 
-    private Integer sprintId;
+    private Long sprintId;
 
     private String sprintName;
 
-    private Integer assignedUserId;
+    private Long assignedUserId;
 
     private String assignedUserName;
 
@@ -85,12 +85,12 @@ public class TaskResponseDTO {
         this.storyPoints = storyPoints;
     }
 
-    public Integer getSprintId() {
+    public Long getSprintId() {
         return sprintId;
     }
 
-    public void setSprintId(Integer sprintId) {
-        this.sprintId = sprintId;
+    public void setSprintId(Long long1) {
+        this.sprintId = long1;
     }
 
     public String getSprintName() {
@@ -101,12 +101,12 @@ public class TaskResponseDTO {
         this.sprintName = sprintName;
     }
 
-    public Integer getAssignedUserId() {
+    public Long getAssignedUserId() {
         return assignedUserId;
     }
 
-    public void setAssignedUserId(Integer assignedUserId) {
-        this.assignedUserId = assignedUserId;
+    public void setAssignedUserId(Long long1) {
+        this.assignedUserId = long1;
     }
 
     public String getAssignedUserName() {

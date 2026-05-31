@@ -24,7 +24,7 @@ public class Project {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer projectId;
+	private Long projectId;
 	
 	private String name;
 	@ManyToOne
@@ -38,11 +38,11 @@ public class Project {
 	
 	private Float delayRiskScore;
 
-	public Integer getProjectId() {
+	public Long getProjectId() {
 		return projectId;
 	}
 
-	public void setProjectId(Integer projectId) {
+	public void setProjectId(Long projectId) {
 		this.projectId = projectId;
 	}
 
@@ -94,7 +94,7 @@ public class Project {
 		this.delayRiskScore = delayRiskScore;
 	}
 
-	public Project(Integer projectId, String name, User manager, LocalDate startDate, LocalDate endDate,
+	public Project(Long projectId, String name, User manager, LocalDate startDate, LocalDate endDate,
 			ProjectStatus status, Float delayRiskScore) {
 	
 		this.projectId = projectId;

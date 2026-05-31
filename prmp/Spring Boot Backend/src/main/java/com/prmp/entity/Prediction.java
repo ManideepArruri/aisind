@@ -20,7 +20,7 @@ public class Prediction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer predictionId;
+    private Long predictionId;
 
     @ManyToOne
     @JoinColumn(name = "project_id")
@@ -37,7 +37,7 @@ public class Prediction {
     
     public Prediction() {}
 
-	public Prediction(Integer predictionId, Project project, Float delayProbability, RiskStatus riskStatus,
+	public Prediction(Long predictionId, Project project, Float delayProbability, RiskStatus riskStatus,
 			String recommendation, LocalDateTime generatedAt) {
 		super();
 		this.predictionId = predictionId;
@@ -48,11 +48,11 @@ public class Prediction {
 		this.generatedAt = generatedAt;
 	}
 
-	public Integer getPredictionId() {
+	public Long getPredictionId() {
 		return predictionId;
 	}
 
-	public void setPredictionId(Integer predictionId) {
+	public void setPredictionId(Long predictionId) {
 		this.predictionId = predictionId;
 	}
 

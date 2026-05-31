@@ -30,19 +30,19 @@ public class SprintController {
     }
 
     @GetMapping("/{id}")
-    public SprintResponseDTO getSprintById(@PathVariable Integer id) {
+    public SprintResponseDTO getSprintById(@PathVariable Long id) {
 
         return sprintService.getSprintById(id);
     }
 
     @PutMapping("/{id}")
-    public SprintResponseDTO updateSprint(@PathVariable Integer id,@RequestBody SprintRequestDTO requestDTO) {
+    public SprintResponseDTO updateSprint(@PathVariable Long id,@RequestBody SprintRequestDTO requestDTO) {
 
         return sprintService.updateSprint(id,requestDTO);
     }
 
     @DeleteMapping("/{id}")
-    public String deleteSprint(@PathVariable Integer id) {
+    public String deleteSprint(@PathVariable Long id) {
 
         sprintService.deleteSprint(id);
 

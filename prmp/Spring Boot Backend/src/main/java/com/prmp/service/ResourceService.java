@@ -2,13 +2,22 @@ package com.prmp.service;
 
 import java.util.List;
 
-import com.prmp.entity.Resource;
+import com.prmp.dto.ResourceRequestDTO;
+import com.prmp.dto.ResourceResponseDTO;
 
 public interface ResourceService {
 
-    Resource createResource(Resource resource);
+    ResourceResponseDTO createResource(
+            ResourceRequestDTO requestDTO);
 
-    List<Resource> getAllResources();
+    List<ResourceResponseDTO> getAllResources();
 
-    Resource updateResource(Integer id, Resource resource);
+    ResourceResponseDTO getResourceById(
+            Long id);
+
+    ResourceResponseDTO updateResource(
+            Long id,
+            ResourceRequestDTO requestDTO);
+
+    void deleteResource(Long id);
 }

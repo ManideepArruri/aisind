@@ -11,9 +11,9 @@ public interface SprintService {
 
     List<SprintResponseDTO> getAllSprints();
 
-    SprintResponseDTO getSprintById(Integer id);
+    SprintResponseDTO getSprintById(Long id);
 
-    SprintResponseDTO updateSprint(Integer id,SprintRequestDTO requestDTO);
+    SprintResponseDTO updateSprint(Long id,SprintRequestDTO requestDTO);
 
-    void deleteSprint(Integer id);
+    void deleteSprint(Long id);
 }

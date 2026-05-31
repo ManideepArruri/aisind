@@ -6,9 +6,9 @@ import com.prmp.enums.SprintStatus;
 
 public class SprintResponseDTO {
 
-    private Integer sprintId;
+    private Long sprintId;
 
-    private Integer projectId;
+    private Long projectId;
 
     private String projectName;
 
@@ -22,20 +22,20 @@ public class SprintResponseDTO {
 
     private SprintStatus status;
 
-    public Integer getSprintId() {
+    public Long getSprintId() {
         return sprintId;
     }
 
-    public void setSprintId(Integer sprintId) {
-        this.sprintId = sprintId;
+    public void setSprintId(Long long1) {
+        this.sprintId = long1;
     }
 
-    public Integer getProjectId() {
+    public Long getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(Integer projectId) {
-        this.projectId = projectId;
+    public void setProjectId(Long long1) {
+        this.projectId = long1;
     }
 
     public String getProjectName() {

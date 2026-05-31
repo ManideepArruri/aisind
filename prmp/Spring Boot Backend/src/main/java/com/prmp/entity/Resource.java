@@ -16,7 +16,7 @@ public class Resource {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer resourceId;
+	private Long resourceId;
 	
 	@ManyToOne
     @JoinColumn(name = "user_id")
@@ -33,7 +33,7 @@ public class Resource {
     
     public Resource() {}
 
-	public Resource(Integer resourceId, User user, Project project, Float utilizationPct,
+	public Resource(Long resourceId, User user, Project project, Float utilizationPct,
 			AvailabilityStatus availability) {
 		super();
 		this.resourceId = resourceId;
@@ -43,11 +43,11 @@ public class Resource {
 		this.availability = availability;
 	}
 
-	public Integer getResourceId() {
+	public Long getResourceId() {
 		return resourceId;
 	}
 
-	public void setResourceId(Integer resourceId) {
+	public void setResourceId(Long resourceId) {
 		this.resourceId = resourceId;
 	}
 

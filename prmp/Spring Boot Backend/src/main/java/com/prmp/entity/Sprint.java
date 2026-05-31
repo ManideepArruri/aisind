@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 public class Sprint {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer sprintId;
+	private Long sprintId;
 	@ManyToOne
 	@JoinColumn(name = "project_id")
 	private Project project;
@@ -37,11 +37,11 @@ public class Sprint {
 	@Enumerated(EnumType.STRING)
 	private SprintStatus status;
 
-	public Integer getSprintId() {
+	public Long getSprintId() {
 		return sprintId;
 	}
 
-	public void setSprintId(Integer sprintId) {
+	public void setSprintId(Long sprintId) {
 		this.sprintId = sprintId;
 	}
 
@@ -93,7 +93,7 @@ public class Sprint {
 		this.status = status;
 	}
 
-	public Sprint(Integer sprintId, Project project, String sprintName, Integer velocity, LocalDate startDate,
+	public Sprint(Long sprintId, Project project, String sprintName, Integer velocity, LocalDate startDate,
 			LocalDate endDate, SprintStatus status) {
 		
 		this.sprintId = sprintId;
