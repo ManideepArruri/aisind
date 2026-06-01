@@ -1,0 +1,152 @@
+2026-06-01T03:50:13.135Z [[32MINFO[39M]:  Notification service running on port 4000
+2026-06-01T03:50:27.608Z [[32MINFO[39M]: Client connected: N2Z4VaKmq7U1N8FOAAAB
+2026-06-01T03:50:27.642Z [[32MINFO[39M]: Client N2Z4VaKmq7U1N8FOAAAB joined room: admin
+2026-06-01T03:50:27.750Z [[32MINFO[39M]: Client N2Z4VaKmq7U1N8FOAAAB joined room: admin
+2026-06-01T03:50:34.220Z [[32MINFO[39M]: Client N2Z4VaKmq7U1N8FOAAAB joined room: developer
+2026-06-01T03:50:37.226Z [[32MINFO[39M]: Client N2Z4VaKmq7U1N8FOAAAB joined room: admin
+2026-06-01T03:51:57.104Z [[32MINFO[39M]: ::1 - - [01/Jun/2026:03:51:57 +0000] "POST /notify/predictionGenerated HTTP/1.1" 200 100 "-" "PostmanRuntime/7.51.1"
+2026-06-01T03:53:17.374Z [[32MINFO[39M]: Client N2Z4VaKmq7U1N8FOAAAB joined room: admin
+2026-06-01T03:59:45.302Z [[32MINFO[39M]: ::ffff:127.0.0.1 - - [01/Jun/2026:03:59:45 +0000] "POST /notify/predictionGenerated HTTP/1.1" 200 129 "-" "Java/17.0.12"
+2026-06-01T05:06:41.587Z [[32MINFO[39M]: Client disconnected: N2Z4VaKmq7U1N8FOAAAB
+2026-06-01T06:09:28.070Z [[32MINFO[39M]: Client connected: GTwHJ6czyPFKsvseAAAD
+2026-06-01T06:12:21.423Z [[32MINFO[39M]: Client connected: LXf1diq1IOSAEnuWAAAF
+2026-06-01T06:12:21.451Z [[32MINFO[39M]: Client LXf1diq1IOSAEnuWAAAF joined room: admin
+2026-06-01T06:12:58.213Z [[32MINFO[39M]: Client disconnected: LXf1diq1IOSAEnuWAAAF
+2026-06-01T06:12:58.252Z [[32MINFO[39M]: Client connected: 3waRzKM1k3WwwKEKAAAH
+2026-06-01T06:12:58.261Z [[32MINFO[39M]: Client 3waRzKM1k3WwwKEKAAAH joined room: admin
+2026-06-01T06:41:03.736Z [[32MINFO[39M]: Client disconnected: GTwHJ6czyPFKsvseAAAD
+2026-06-01T06:44:09.059Z [[32MINFO[39M]: Client disconnected: 3waRzKM1k3WwwKEKAAAH
+2026-06-01T06:49:06.491Z [[32MINFO[39M]: Client connected: zRBBOvPKbwk4cvedAAAJ
+2026-06-01T06:55:55.471Z [[32MINFO[39M]: Client disconnected: zRBBOvPKbwk4cvedAAAJ
+2026-06-01T06:56:42.136Z [[32MINFO[39M]: Client connected: YfpV0nU-R2KKKpVHAAAL
+2026-06-01T06:56:42.148Z [[32MINFO[39M]: Client YfpV0nU-R2KKKpVHAAAL joined room: admin
+2026-06-01T07:02:27.255Z [[32MINFO[39M]: Client disconnected: YfpV0nU-R2KKKpVHAAAL
+2026-06-01T07:09:34.347Z [[32MINFO[39M]: Client connected: HAj4Pu8R9YO_2gduAAAN
+2026-06-01T07:11:42.205Z [[32MINFO[39M]: Client disconnected: HAj4Pu8R9YO_2gduAAAN
+2026-06-01T07:12:49.810Z [[32MINFO[39M]: Client connected: PlM4XtKwyZSjoy_WAAAP
+2026-06-01T07:12:49.821Z [[32MINFO[39M]: Client PlM4XtKwyZSjoy_WAAAP joined room: admin
+2026-06-01T07:19:49.951Z [[32MINFO[39M]: Client disconnected: PlM4XtKwyZSjoy_WAAAP
+2026-06-01T07:20:09.933Z [[32MINFO[39M]: Client connected: MELFDyYVb_Ti1cQ0AAAR
+2026-06-01T07:20:09.945Z [[32MINFO[39M]: Client MELFDyYVb_Ti1cQ0AAAR joined room: admin
+2026-06-01T07:23:48.318Z [[32MINFO[39M]: Client disconnected: MELFDyYVb_Ti1cQ0AAAR
+2026-06-01T07:23:49.160Z [[32MINFO[39M]: Client connected: Qu8DwQKHQ0tvOzN3AAAT
+2026-06-01T07:23:49.165Z [[32MINFO[39M]: Client Qu8DwQKHQ0tvOzN3AAAT joined room: admin
+2026-06-01T07:27:23.593Z [[32MINFO[39M]: Client disconnected: Qu8DwQKHQ0tvOzN3AAAT
+2026-06-01T07:48:58.552Z [[32MINFO[39M]: Client connected: 7PAbPnIGKP8Yei9nAAAV
+2026-06-01T08:00:05.597Z [[32MINFO[39M]: Client disconnected: 7PAbPnIGKP8Yei9nAAAV
+2026-06-01T08:00:06.452Z [[32MINFO[39M]: Client connected: BV1gdZu5gZnYaqz7AAAX
+2026-06-01T08:00:06.458Z [[32MINFO[39M]: Client BV1gdZu5gZnYaqz7AAAX joined room: admin
+2026-06-01T08:05:51.565Z [[32MINFO[39M]: Client disconnected: BV1gdZu5gZnYaqz7AAAX
+2026-06-01T08:06:43.167Z [[32MINFO[39M]: Client connected: OUd0Pzy7eKv5WmQlAAAZ
+2026-06-01T08:09:07.573Z [[32MINFO[39M]: Client disconnected: OUd0Pzy7eKv5WmQlAAAZ
+2026-06-01T08:09:07.597Z [[32MINFO[39M]: Client connected: 1JvpsFvWxbkqmDWbAAAb
+2026-06-01T08:09:07.602Z [[32MINFO[39M]: Client 1JvpsFvWxbkqmDWbAAAb joined room: admin
+2026-06-01T08:24:05.689Z [[32MINFO[39M]: Client disconnected: 1JvpsFvWxbkqmDWbAAAb
+2026-06-01T08:24:06.553Z [[32MINFO[39M]: Client connected: iFv8UmRWfPXI-OlKAAAd
+2026-06-01T08:24:06.557Z [[32MINFO[39M]: Client iFv8UmRWfPXI-OlKAAAd joined room: admin
+2026-06-01T08:29:51.692Z [[32MINFO[39M]: Client disconnected: iFv8UmRWfPXI-OlKAAAd
+2026-06-01T08:34:12.762Z [[32MINFO[39M]: Client connected: ud3K89E4xvK1-nfOAAAf
+2026-06-01T08:34:12.795Z [[32MINFO[39M]: Client disconnected: ud3K89E4xvK1-nfOAAAf
+2026-06-01T08:34:12.831Z [[32MINFO[39M]: Client connected: pvuTNixGFCV9Wi3PAAAh
+2026-06-01T08:34:12.841Z [[32MINFO[39M]: Client pvuTNixGFCV9Wi3PAAAh joined room: admin
+2026-06-01T08:39:57.959Z [[32MINFO[39M]: Client disconnected: pvuTNixGFCV9Wi3PAAAh
+2026-06-01T08:40:15.311Z [[32MINFO[39M]: Client connected: bwMNTPOg-U7MTGiUAAAj
+2026-06-01T08:40:15.318Z [[32MINFO[39M]: Client bwMNTPOg-U7MTGiUAAAj joined room: admin
+2026-06-01T08:40:15.319Z [[32MINFO[39M]: Client bwMNTPOg-U7MTGiUAAAj joined room: admin
+2026-06-01T08:41:43.122Z [[32MINFO[39M]: Client disconnected: bwMNTPOg-U7MTGiUAAAj
+2026-06-01T08:41:43.202Z [[32MINFO[39M]: Client connected: zNBPX1Lrk74NE6VjAAAl
+2026-06-01T08:41:43.210Z [[32MINFO[39M]: Client zNBPX1Lrk74NE6VjAAAl joined room: admin
+2026-06-01T08:41:43.324Z [[32MINFO[39M]: Client zNBPX1Lrk74NE6VjAAAl joined room: admin
+2026-06-01T08:41:44.538Z [[32MINFO[39M]: Client disconnected: zNBPX1Lrk74NE6VjAAAl
+2026-06-01T08:41:44.591Z [[32MINFO[39M]: Client connected: 9P_uY08RUGaU2ZVuAAAn
+2026-06-01T08:41:44.597Z [[32MINFO[39M]: Client 9P_uY08RUGaU2ZVuAAAn joined room: admin
+2026-06-01T08:41:44.601Z [[32MINFO[39M]: Client 9P_uY08RUGaU2ZVuAAAn joined room: admin
+2026-06-01T08:41:48.998Z [[32MINFO[39M]: Client disconnected: 9P_uY08RUGaU2ZVuAAAn
+2026-06-01T08:41:49.048Z [[32MINFO[39M]: Client connected: 38hIAzcJNRa0FG9AAAAp
+2026-06-01T08:41:49.054Z [[32MINFO[39M]: Client 38hIAzcJNRa0FG9AAAAp joined room: admin
+2026-06-01T08:41:49.055Z [[32MINFO[39M]: Client 38hIAzcJNRa0FG9AAAAp joined room: admin
+2026-06-01T08:41:49.509Z [[32MINFO[39M]: Client disconnected: 38hIAzcJNRa0FG9AAAAp
+2026-06-01T08:41:49.558Z [[32MINFO[39M]: Client connected: IP-HtCIo29jW2lM2AAAr
+2026-06-01T08:41:49.566Z [[32MINFO[39M]: Client IP-HtCIo29jW2lM2AAAr joined room: admin
+2026-06-01T08:41:49.571Z [[32MINFO[39M]: Client IP-HtCIo29jW2lM2AAAr joined room: admin
+2026-06-01T08:41:49.649Z [[32MINFO[39M]: Client disconnected: IP-HtCIo29jW2lM2AAAr
+2026-06-01T08:41:49.711Z [[32MINFO[39M]: Client connected: K_QEKIwgfc7-AKSCAAAt
+2026-06-01T08:41:49.720Z [[32MINFO[39M]: Client K_QEKIwgfc7-AKSCAAAt joined room: admin
+2026-06-01T08:41:49.825Z [[32MINFO[39M]: Client K_QEKIwgfc7-AKSCAAAt joined room: admin
+2026-06-01T08:41:49.886Z [[32MINFO[39M]: Client disconnected: K_QEKIwgfc7-AKSCAAAt
+2026-06-01T08:41:49.937Z [[32MINFO[39M]: Client connected: eolRGzkijyK9o9grAAAv
+2026-06-01T08:41:49.944Z [[32MINFO[39M]: Client eolRGzkijyK9o9grAAAv joined room: admin
+2026-06-01T08:41:50.052Z [[32MINFO[39M]: Client eolRGzkijyK9o9grAAAv joined room: admin
+2026-06-01T08:48:49.970Z [[32MINFO[39M]: Client disconnected: eolRGzkijyK9o9grAAAv
+2026-06-01T08:48:50.035Z [[32MINFO[39M]: Client connected: wKij7iVswwW7WQ3UAAAx
+2026-06-01T08:48:50.041Z [[32MINFO[39M]: Client wKij7iVswwW7WQ3UAAAx joined room: admin
+2026-06-01T08:48:50.042Z [[32MINFO[39M]: Client wKij7iVswwW7WQ3UAAAx joined room: admin
+2026-06-01T08:49:24.020Z [[32MINFO[39M]: Client disconnected: wKij7iVswwW7WQ3UAAAx
+2026-06-01T08:49:24.069Z [[32MINFO[39M]: Client connected: kRLhrDlVkrBYBup8AAAz
+2026-06-01T08:49:24.078Z [[32MINFO[39M]: Client kRLhrDlVkrBYBup8AAAz joined room: admin
+2026-06-01T08:49:24.082Z [[32MINFO[39M]: Client kRLhrDlVkrBYBup8AAAz joined room: admin
+2026-06-01T08:49:25.459Z [[32MINFO[39M]: Client disconnected: kRLhrDlVkrBYBup8AAAz
+2026-06-01T08:49:25.507Z [[32MINFO[39M]: Client connected: zVmxcvPbiPwag53eAAA1
+2026-06-01T08:49:25.514Z [[32MINFO[39M]: Client zVmxcvPbiPwag53eAAA1 joined room: admin
+2026-06-01T08:49:25.518Z [[32MINFO[39M]: Client zVmxcvPbiPwag53eAAA1 joined room: admin
+2026-06-01T08:49:25.577Z [[32MINFO[39M]: Client disconnected: zVmxcvPbiPwag53eAAA1
+2026-06-01T08:49:25.622Z [[32MINFO[39M]: Client connected: 7bU0Fz5mrDHGlu-UAAA3
+2026-06-01T08:49:25.631Z [[32MINFO[39M]: Client 7bU0Fz5mrDHGlu-UAAA3 joined room: admin
+2026-06-01T08:49:25.790Z [[32MINFO[39M]: Client connected: ARfYtdmCFiX47SsnAAA5
+2026-06-01T08:49:25.799Z [[32MINFO[39M]: Client ARfYtdmCFiX47SsnAAA5 joined room: admin
+2026-06-01T08:49:25.915Z [[32MINFO[39M]: Client ARfYtdmCFiX47SsnAAA5 joined room: admin
+2026-06-01T08:49:25.970Z [[32MINFO[39M]: Client disconnected: ARfYtdmCFiX47SsnAAA5
+2026-06-01T08:49:26.016Z [[32MINFO[39M]: Client connected: slMnxAqtaIx1R_nnAAA7
+2026-06-01T08:49:26.023Z [[32MINFO[39M]: Client slMnxAqtaIx1R_nnAAA7 joined room: admin
+2026-06-01T08:49:26.027Z [[32MINFO[39M]: Client slMnxAqtaIx1R_nnAAA7 joined room: admin
+2026-06-01T08:49:50.924Z [[32MINFO[39M]: Client disconnected: slMnxAqtaIx1R_nnAAA7
+2026-06-01T08:49:51.128Z [[32MINFO[39M]: Client connected: PssL-PmLfIbf0PgcAAA9
+2026-06-01T08:49:51.139Z [[32MINFO[39M]: Client PssL-PmLfIbf0PgcAAA9 joined room: admin
+2026-06-01T08:49:51.143Z [[32MINFO[39M]: Client PssL-PmLfIbf0PgcAAA9 joined room: admin
+2026-06-01T08:50:02.639Z [[32MINFO[39M]: Client disconnected: PssL-PmLfIbf0PgcAAA9
+2026-06-01T08:50:02.708Z [[32MINFO[39M]: Client connected: VYlYZUjkhpH41bhNAAA_
+2026-06-01T08:50:02.716Z [[32MINFO[39M]: Client VYlYZUjkhpH41bhNAAA_ joined room: admin
+2026-06-01T08:50:02.824Z [[32MINFO[39M]: Client VYlYZUjkhpH41bhNAAA_ joined room: admin
+2026-06-01T08:50:04.312Z [[32MINFO[39M]: Client connected: e5VTxc17v2D5SsZpAABB
+2026-06-01T08:50:10.630Z [[32MINFO[39M]: Client disconnected: 7bU0Fz5mrDHGlu-UAAA3
+2026-06-01T08:55:10.840Z [[32MINFO[39M]: Client disconnected: VYlYZUjkhpH41bhNAAA_
+2026-06-01T08:55:11.029Z [[32MINFO[39M]: Client connected: -sVyrKz8Mea_EWm6AABD
+2026-06-01T08:55:11.039Z [[32MINFO[39M]: Client -sVyrKz8Mea_EWm6AABD joined room: admin
+2026-06-01T08:55:11.043Z [[32MINFO[39M]: Client -sVyrKz8Mea_EWm6AABD joined room: admin
+2026-06-01T09:00:47.814Z [[32MINFO[39M]: Client disconnected: -sVyrKz8Mea_EWm6AABD
+2026-06-01T09:00:48.036Z [[32MINFO[39M]: Client connected: 9eFCWAaEgsDV4gGRAABF
+2026-06-01T09:00:48.043Z [[32MINFO[39M]: Client 9eFCWAaEgsDV4gGRAABF joined room: admin
+2026-06-01T09:00:48.148Z [[32MINFO[39M]: Client 9eFCWAaEgsDV4gGRAABF joined room: admin
+2026-06-01T09:00:51.907Z [[32MINFO[39M]: Client disconnected: 9eFCWAaEgsDV4gGRAABF
+2026-06-01T09:00:51.927Z [[32MINFO[39M]: Client connected: E1bM32qlju_Mi5kAAABH
+2026-06-01T09:00:51.940Z [[32MINFO[39M]: Client E1bM32qlju_Mi5kAAABH joined room: admin
+2026-06-01T09:00:52.046Z [[32MINFO[39M]: Client E1bM32qlju_Mi5kAAABH joined room: admin
+2026-06-01T09:17:18.967Z [[32MINFO[39M]: Client connected: Uf6hs8tujQIYj1vmAABJ
+2026-06-01T09:17:18.978Z [[32MINFO[39M]: Client Uf6hs8tujQIYj1vmAABJ joined room: admin
+2026-06-01T09:17:19.087Z [[32MINFO[39M]: Client Uf6hs8tujQIYj1vmAABJ joined room: admin
+2026-06-01T09:17:26.080Z [[32MINFO[39M]: Client connected: LscDcXzxl6GvfyR2AABL
+2026-06-01T09:17:26.096Z [[32MINFO[39M]: Client LscDcXzxl6GvfyR2AABL joined room: admin
+2026-06-01T09:17:26.200Z [[32MINFO[39M]: Client LscDcXzxl6GvfyR2AABL joined room: admin
+2026-06-01T09:18:18.288Z [[32MINFO[39M]: Client disconnected: LscDcXzxl6GvfyR2AABL
+2026-06-01T09:18:18.309Z [[32MINFO[39M]: Client connected: xtYNrJjdW2SZUeVDAABN
+2026-06-01T09:18:18.321Z [[32MINFO[39M]: Client xtYNrJjdW2SZUeVDAABN joined room: admin
+2026-06-01T09:18:18.427Z [[32MINFO[39M]: Client xtYNrJjdW2SZUeVDAABN joined room: admin
+2026-06-01T09:22:27.710Z [[32MINFO[39M]:  Notification service running on port 4000
+2026-06-01T09:22:30.337Z [[32MINFO[39M]: Client connected: _mbYA1gXiXIqTX-AAAAC
+2026-06-01T09:22:30.339Z [[32MINFO[39M]: Client connected: I26CfWzEpQAh0tXCAAAD
+2026-06-01T09:22:30.359Z [[32MINFO[39M]: Client _mbYA1gXiXIqTX-AAAAC joined room: admin
+2026-06-01T09:22:30.360Z [[32MINFO[39M]: Client I26CfWzEpQAh0tXCAAAD joined room: admin
+2026-06-01T09:22:38.156Z [[32MINFO[39M]: Client disconnected: _mbYA1gXiXIqTX-AAAAC
+2026-06-01T09:22:38.385Z [[32MINFO[39M]: Client connected: XKdcb04tC1mqVqRTAAAF
+2026-06-01T09:22:38.394Z [[32MINFO[39M]: Client XKdcb04tC1mqVqRTAAAF joined room: admin
+2026-06-01T09:22:38.505Z [[32MINFO[39M]: Client XKdcb04tC1mqVqRTAAAF joined room: admin
+2026-06-01T09:23:37.774Z [[32MINFO[39M]: Client XKdcb04tC1mqVqRTAAAF joined room: admin
+2026-06-01T09:23:46.497Z [[32MINFO[39M]: Client I26CfWzEpQAh0tXCAAAD joined room: admin
+2026-06-01T09:26:45.954Z [[32MINFO[39M]: Client disconnected: I26CfWzEpQAh0tXCAAAD
+2026-06-01T09:26:46.638Z [[32MINFO[39M]: Client connected: 7UfjEbnDUeSw78d9AAAH
+2026-06-01T09:26:52.697Z [[32MINFO[39M]: Client 7UfjEbnDUeSw78d9AAAH joined room: admin
+2026-06-01T09:26:52.733Z [[32MINFO[39M]: Client 7UfjEbnDUeSw78d9AAAH joined room: admin
+2026-06-01T09:26:53.254Z [[32MINFO[39M]: Client disconnected: XKdcb04tC1mqVqRTAAAF
+2026-06-01T09:26:53.688Z [[32MINFO[39M]: Client connected: x9nAmDzv-GuMFNt2AAAJ
+2026-06-01T09:26:53.783Z [[32MINFO[39M]: Client x9nAmDzv-GuMFNt2AAAJ joined room: admin
+2026-06-01T09:26:53.788Z [[32MINFO[39M]: Client x9nAmDzv-GuMFNt2AAAJ joined room: admin

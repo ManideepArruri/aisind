@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socket.IO Test Client</title>
+  <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+<body>
+  <h2>Socket.IO Test Client</h2>
+  <script>
+    // Connect to your Node server
+    const socket = io("http://localhost:4000");
+
+    // When connected, join the developer room
+    socket.on("connect", () => {
+      console.log("Connected to server:", socket.id);
+      socket.emit("joinRoom", "developer");
+    });
+
+    // Listen for events
+    socket.on("taskAssigned", (data) => {
+      console.log("Task Assigned:", data);
+    });
+
+    socket.on("taskStatusUpdated", (data) => {
+      console.log("Task Status Updated:", data);
+    });
+
+    socket.on("predictionGenerated", (data) => {
+      console.log("Prediction Generated:", data);
+    });
+
+    socket.on("sprintDeadlineAlert", (data) => {
+      console.log("Sprint Deadline Alert:", data);
+    });
+
+    socket.on("managerFeedbackAdded", (data) => {
+      console.log("Manager Feedback Added:", data);
+    });
+
+    // Handle disconnect
+    socket.on("disconnect", () => {
+      console.log("Disconnected from server");
+    });
+  </script>
+</body>
+</html>
