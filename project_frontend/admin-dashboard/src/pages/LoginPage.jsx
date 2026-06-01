@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../services/api";
+import "./LoginPage.css";
+import logo from "../assets/logo.png";
 
 export default function LoginPage() {
 
@@ -10,11 +12,9 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
 
   const login = async (e) => {
-
     e.preventDefault();
 
     try {
-
       const response = await api.post(
         "/auth/login",
         {
@@ -23,20 +23,9 @@ export default function LoginPage() {
         }
       );
 
-      localStorage.setItem(
-        "token",
-        response.data.token
-      );
-
-      localStorage.setItem(
-        "role",
-        response.data.role
-      );
-
-      localStorage.setItem(
-        "email",
-        response.data.email
-      );
+      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("role", response.data.role);
+      localStorage.setItem("email", response.data.email);
 
       if (response.data.role === "ADMIN") {
         navigate("/dashboard");
@@ -49,44 +38,60 @@ export default function LoginPage() {
       }
 
     } catch (error) {
-
       alert("Invalid Credentials");
     }
   };
 
   return (
-    <div style={{ padding: "50px" }}>
-      <h2>Login</h2>
-
-      <form onSubmit={login}>
-
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) =>
-            setEmail(e.target.value)
-          }
-        />
-
-        <br /><br />
-
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) =>
-            setPassword(e.target.value)
-          }
-        />
-
-        <br /><br />
-
-        <button type="submit">
-          Login
-        </button>
-
-      </form>
+    <div className="login-container">
+      <div className="login-left">
+        <div className="login-card">
+          <div className="login-header">
+            <img src={logo} alt="PRMP Logo" className="login-logo" />
+            <h1 className="login-title">PRMP</h1>
+          </div>
+          <p className="login-subtitle">AI-Powered Project Intelligence Platform</p>
+          
+          <form onSubmit={login} className="login-form">
+            <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            
+            <button type="submit" className="login-button">
+              Sign In
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div className="login-right">
+        <div className="right-overlay">
+          <h2>Predictive Project Intelligence</h2>
+          <p>
+            Gain real-time insights, analyze team member utilization heatmaps, calculate sprint velocity trends, and predict project delays using AI.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

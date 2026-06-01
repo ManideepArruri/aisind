@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import LoginPage from "./pages/LoginPage";
 import api from "./services/api";
 import ProjectsPage from "./pages/ProjectsPage";
 import TasksPage from "./pages/TasksPage";
 import SprintsPage from "./pages/SprintsPage";
-import PredictionsPage from "./pages/PredictionsPage"
+import PredictionsPage from "./pages/PredictionsPage";
 import ResourcesPage from "./pages/ResourcesPage";
 import AnalyticsPage from "./pages/AnalyticsPage";
 import NotificationsPage from "./pages/NotificationsPage";
@@ -22,8 +22,7 @@ import ManagerDashboard from "./pages/ManagerDashboard";
 
 function App() {
   useEffect(() => {
-    // fake role for now
-    const userRole = "admin";
+    const userRole = (localStorage.getItem("role") || "admin").toLowerCase();
     api.get("/projects")
   .then((response) => {
     console.log("PROJECTS:", response.data);

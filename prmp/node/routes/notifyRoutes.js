@@ -33,7 +33,7 @@ module.exports = (io) => {
   // Manager Feedback Added
   router.post("/managerFeedbackAdded", (req, res) => {
     const data = req.body;
-    io.to("manager").emit("managerFeedbackAdded", data);
+    io.to("developer").emit("managerFeedbackAdded", data);
     res.json({ message: "Manager Feedback notification sent", data });
   });
 

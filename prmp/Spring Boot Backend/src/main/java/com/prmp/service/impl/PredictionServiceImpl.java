@@ -16,6 +16,7 @@ import com.prmp.enums.RiskStatus;
 import com.prmp.repository.PredictionRepository;
 import com.prmp.repository.ProjectRepository;
 import com.prmp.service.PredictionService;
+import com.prmp.service.NotificationService;
 
 @Service
 public class PredictionServiceImpl implements PredictionService {
@@ -28,6 +29,9 @@ public class PredictionServiceImpl implements PredictionService {
     
     @Autowired
     private RestTemplate restTemplate;
+
+    @Autowired
+    private NotificationService notificationService;
 
     @Override
     public PredictionResponseDTO generatePrediction(
@@ -63,8 +67,13 @@ public class PredictionServiceImpl implements PredictionService {
         Prediction savedPrediction =
                 predictionRepository.save(prediction);
 
-        return convertToResponseDTO(
-                savedPrediction);
+        PredictionResponseDTO responseDTO = convertToResponseDTO(savedPrediction);
+        notificationService.sendPredictionGeneratedNotification(
+                responseDTO.getProjectName(),
+                responseDTO.getRiskStatus(),
+                Math.round(responseDTO.getDelayProbability() * 100)
+        );
+        return responseDTO;
     }
 
     @Override

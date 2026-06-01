@@ -15,6 +15,7 @@ import com.prmp.repository.SprintRepository;
 import com.prmp.repository.TaskRepository;
 import com.prmp.repository.UserRepository;
 import com.prmp.service.TaskService;
+import com.prmp.service.NotificationService;
 
 @Service
 public class TaskServiceImpl implements TaskService {
@@ -27,6 +28,9 @@ public class TaskServiceImpl implements TaskService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private NotificationService notificationService;
 
     @Override
     public TaskResponseDTO createTask(
@@ -62,7 +66,9 @@ public class TaskServiceImpl implements TaskService {
 
         Task savedTask = taskRepository.save(task);
 
-        return convertToResponseDTO(savedTask);
+        TaskResponseDTO responseDTO = convertToResponseDTO(savedTask);
+        notificationService.sendTaskAssignedNotification(responseDTO.getAssignedUserName(), responseDTO.getTitle());
+        return responseDTO;
     }
 
     @Override
@@ -121,7 +127,9 @@ public class TaskServiceImpl implements TaskService {
 
         Task updatedTask = taskRepository.save(task);
 
-        return convertToResponseDTO(updatedTask);
+        TaskResponseDTO responseDTO = convertToResponseDTO(updatedTask);
+        notificationService.sendTaskStatusUpdatedNotification(responseDTO.getTitle(), responseDTO.getStatus().name());
+        return responseDTO;
     }
 
     @Override

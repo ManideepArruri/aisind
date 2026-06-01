@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../services/api";
 import MainLayout from "../layouts/MainLayout";
+import "./AnalyticsPage.css";
 
 function AnalyticsPage() {
 
@@ -14,36 +15,34 @@ function AnalyticsPage() {
     const [lowRiskCount, setLowRiskCount] = useState(0);
 
     useEffect(() => {
-
         api.get("/projects")
-            .then(res => setProjectCount(res.data.length));
+            .then(res => setProjectCount(res.data.length))
+            .catch(console.error);
 
         api.get("/tasks")
-            .then(res => setTaskCount(res.data.length));
+            .then(res => setTaskCount(res.data.length))
+            .catch(console.error);
 
         api.get("/sprints")
-            .then(res => setSprintCount(res.data.length));
+            .then(res => setSprintCount(res.data.length))
+            .catch(console.error);
 
         api.get("/resources")
-            .then(res => setResourceCount(res.data.length));
+            .then(res => setResourceCount(res.data.length))
+            .catch(console.error);
 
         api.get("/predictions")
             .then(res => {
-
                 const predictions = res.data;
 
                 if (predictions.length > 0) {
-
                     const avg =
                         predictions.reduce(
-                            (sum, p) =>
-                                sum + p.delayProbability,
+                            (sum, p) => sum + p.delayProbability,
                             0
                         ) / predictions.length;
 
-                    setAverageDelay(
-                        (avg * 100).toFixed(0)
-                    );
+                    setAverageDelay((avg * 100).toFixed(0));
 
                     setHighRiskCount(
                         predictions.filter(
@@ -53,85 +52,71 @@ function AnalyticsPage() {
 
                     setMediumRiskCount(
                         predictions.filter(
-                            p => p.riskStatus === "MEDIUM_RISK"
+                            p => p.riskStatus === "MODERATE_RISK"
                         ).length
                     );
 
                     setLowRiskCount(
                         predictions.filter(
-                            p => p.riskStatus === "LOW_RISK"
+                            p => p.riskStatus === "ON_TRACK"
                         ).length
                     );
                 }
-            });
+            })
+            .catch(console.error);
 
     }, []);
 
     return (
         <MainLayout>
+            <h1 style={{ marginBottom: "8px" }}>Analytics Dashboard</h1>
+            <p style={{ color: "var(--text-muted)", marginBottom: "24px" }}>
+                Cross-service data aggregation and intelligence metrics.
+            </p>
 
-            <h1>Analytics Dashboard</h1>
-
-            <div
-                style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(2, 1fr)",
-                    gap: "20px",
-                    marginTop: "20px"
-                }}
-            >
-
-                <div style={cardStyle}>
+            <div className="analytics-grid">
+                <div className="analytics-card">
                     <h3>Total Projects</h3>
                     <h2>{projectCount}</h2>
                 </div>
 
-                <div style={cardStyle}>
+                <div className="analytics-card">
                     <h3>Total Tasks</h3>
                     <h2>{taskCount}</h2>
                 </div>
 
-                <div style={cardStyle}>
+                <div className="analytics-card">
                     <h3>Total Sprints</h3>
                     <h2>{sprintCount}</h2>
                 </div>
 
-                <div style={cardStyle}>
+                <div className="analytics-card">
                     <h3>Total Resources</h3>
                     <h2>{resourceCount}</h2>
                 </div>
 
-                <div style={cardStyle}>
+                <div className="analytics-card">
                     <h3>Average Delay Risk</h3>
                     <h2>{averageDelay}%</h2>
                 </div>
 
-                <div style={cardStyle}>
+                <div className="analytics-card high-risk">
                     <h3>High Risk Projects</h3>
                     <h2>{highRiskCount}</h2>
                 </div>
 
-                <div style={cardStyle}>
+                <div className="analytics-card medium-risk">
                     <h3>Medium Risk Projects</h3>
                     <h2>{mediumRiskCount}</h2>
                 </div>
 
-                <div style={cardStyle}>
+                <div className="analytics-card low-risk">
                     <h3>Low Risk Projects</h3>
                     <h2>{lowRiskCount}</h2>
                 </div>
-
             </div>
-
         </MainLayout>
     );
 }
-
-const cardStyle = {
-    border: "1px solid #ddd",
-    borderRadius: "10px",
-    padding: "20px",
-    textAlign: "center"
-};
 
 export default AnalyticsPage;

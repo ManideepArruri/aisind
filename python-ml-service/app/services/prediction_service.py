@@ -48,13 +48,13 @@ def rule_based_prediction(metrics: dict):
     if v > 50 and c > 80 and u < 85:
         return {
             "delay_probability": 10,
-            "risk_status": "LOW_RISK",
+            "risk_status": "ON_TRACK",
             "recommendation": "Continue current sprint plan"
         }
     elif 30 <= v <= 50 and 60 <= c <= 80 and 85 <= u <= 95:
         return {
             "delay_probability": 50,
-            "risk_status": "MEDIUM_RISK",
+            "risk_status": "MODERATE_RISK",
             "recommendation": "Monitor sprint velocity and resource allocation"
         }
     elif v < 30 and c < 60 and u > 95:
@@ -66,7 +66,7 @@ def rule_based_prediction(metrics: dict):
     else:
         return {
             "delay_probability": 40,
-            "risk_status": "MEDIUM_RISK",
+            "risk_status": "MODERATE_RISK",
             "recommendation": "Monitor project progress closely"
         }
 
